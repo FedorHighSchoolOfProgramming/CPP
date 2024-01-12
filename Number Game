@@ -1,0 +1,26 @@
+#include <iostream>
+#include <time.h>
+using namespace std;
+
+int answer, random;
+bool stop = false;
+
+int main() {
+	srand(time(NULL));
+	random = 1 + rand() % 15;
+	cout << "Guess the number game" << endl;
+	
+
+	do {
+		cout << "Enter number: ";
+		cin >> answer;
+		if (answer != random)
+			cout << "False" << endl ;
+		else
+			stop = true;
+		cout << "True";
+	} while (!stop);
+	
+
+	return 0;
+}
